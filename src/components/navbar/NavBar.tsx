@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../../assets/logo11.png";
 
+
 export const NavbarComponent: React.FC<{}> = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
@@ -9,6 +10,8 @@ export const NavbarComponent: React.FC<{}> = () => {
   };
 
   return (
+    <>
+    
     <ContainerNavbar>
       <ContainerNavbarLeft>
         <Logo src={logo} />
@@ -68,6 +71,8 @@ export const NavbarComponent: React.FC<{}> = () => {
         </Label>
       </ContainerButton>
     </ContainerNavbar>
+    </>
+    
   );
 };
 
@@ -81,6 +86,11 @@ const ContainerNavbar = styled.div`
   flex-direction: row;
   font-family: "Shantell Sans", cursive;
   position: absolute;
+  z-index: 999;
+  top: 40px;
+  @media(max-width:1000px){
+    top: 0;
+  }
 `;
 const ContainerNavbarLeft = styled.div`
   display: flex;
@@ -110,7 +120,6 @@ const ContainerNavbarCenter = styled.div<{ isOpen: boolean }>`
     flex-direction: column;
     width: 100%;
     transition: 1s;
-    
   }
 `;
 const NavbarLinks = styled.a`
@@ -119,7 +128,7 @@ const NavbarLinks = styled.a`
   color: white;
   padding-right: 20px;
   font-size: 24px;
-  transition: 1.5s;
+  transition: 1s;
   cursor: pointer;
   &:hover {
     color: #56091f;
@@ -132,14 +141,14 @@ const NavbarLinks = styled.a`
     padding-left: 5px;
     font-size: 15px;
   }
-  @media(max-width:1000px){
+  @media (max-width: 1000px) {
     padding-right: 0;
     font-size: 30px;
     i {
-    padding-top: 13px;
-    padding-left: 8px;
-    font-size: 20px;
-  }
+      padding-top: 13px;
+      padding-left: 8px;
+      font-size: 20px;
+    }
   }
 `;
 const NavbarLinkInside = styled.a`
@@ -155,12 +164,12 @@ const NavbarLinkInside = styled.a`
   &:hover {
     color: #56091f;
   }
-  @media(max-width:1000px){
+  @media (max-width: 1000px) {
     font-size: 16px;
   }
 `;
 const MenuDesplegableUl = styled.ul`
-padding-top: 20px;
+  padding-top: 20px;
   list-style: none;
   transition: clip-path 0.3s;
   clip-path: var(--clip);
@@ -171,17 +180,15 @@ padding-top: 20px;
   background-color: #f9aabb;
   @media (max-width: 1000px) {
     display: flex;
-    align-items:center;
-    justify-content:space-around;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
-    height:180px;
-    width:max-content;
-    background-color:transparent #f9aabb;
+    height: 180px;
+    width: max-content;
+    background-color: transparent #f9aabb;
     z-index: 2;
-    transition: .5s;
+    transition: 0.5s;
     padding-top: 0;
-   
-   
   }
 `;
 const MenuDesplegableLi = styled.li``;
@@ -192,7 +199,7 @@ const Ul = styled.ul`
   align-items: center;
   justify-content: center;
   font-size: 15px;
-  
+
   @media (max-width: 1000px) {
     flex-direction: column;
   }
@@ -205,7 +212,6 @@ const Li = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  
 
   &:hover {
     --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
