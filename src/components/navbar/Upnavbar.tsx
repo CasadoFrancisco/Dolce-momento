@@ -38,6 +38,7 @@ const Container = styled.nav`
   padding-bottom: 10px;
   width: 100%;
   position: absolute;
+  z-index: 80;
 `;
 
 const Message = styled.div`
