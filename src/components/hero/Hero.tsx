@@ -63,7 +63,6 @@ export const HeroComponent: React.FC<{}> = () => {
           <ButtonIcon onClick={next} src={flechaDer} />
         </ContainerButtons>
       </Container>
-      
     </>
   );
 };
@@ -77,13 +76,9 @@ const Container = styled.div`
   height: 550px;
   background-color: #ffe5ec;
   padding-top: 150px;
-  @media(max-width:1000px){
+  @media (max-width: 1000px) {
     padding-top: 110px;
   }
-  
-  
-  
-
 `;
 const Img = styled.img`
   height: 100%;
@@ -99,8 +94,6 @@ const ContainerButtons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  height: 100%;
   width: 100%;
   position: absolute;
 `;
@@ -115,31 +108,29 @@ const ButtonIcon = styled.img`
 `;
 
 const ContainerButton = styled.div`
-position: fixed;
-display: flex;
-align-items: center;
-justify-content: center;
-top: 600px;
-position: absolute;
-
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 600px;
+  position: absolute;
 `;
 const Button = styled.button`
   position: absolute;
-    font-family: "Shantell Sans", cursive;
-    height: 40px;
-    width: 200px;
-    font-size: 25px;
-    font-weight: 500;
-    border-radius: 10px;
-    border-style: none;
-    color:#56091f ;
-    background-color: #ffc2d1;
-    cursor: pointer;
-    z-index: 90;
-    transition: 1s;
-    &:hover{
-      background-color: rgba(255, 194, 209, 0.5);
-      color:#ffc2d1;
-;
-    }
+  font-family: "Jost", sans-serif;
+  height: 40px;
+  width: 200px;
+  font-size: 25px;
+  font-weight: 400;
+  border-radius: 5px;
+  border-style: none;
+  color: #56091f;
+  background-color: #ffc2d1;
+  cursor: pointer;
+  z-index: 90;
+  transition: 1s;
+  &:hover {
+    background-color: rgba(255, 194, 209, 0.5);
+    color: #ffc2d1;
+  }
 `;

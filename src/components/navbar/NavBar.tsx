@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../../assets/logo11.png";
 
-
 export const NavbarComponent: React.FC<{}> = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
@@ -11,68 +10,66 @@ export const NavbarComponent: React.FC<{}> = () => {
 
   return (
     <>
-    
-    <ContainerNavbar>
-      <ContainerNavbarLeft>
-        <Logo src={logo} />
-      </ContainerNavbarLeft>
-      <ContainerNavbarCenter isOpen={isOpen}>
-        <Ul>
-          <Li>
-            <NavbarLinks>Home</NavbarLinks>
-          </Li>
-          <Li>
-            <NavbarLinks className="Producto">
-              Productos <i className="fa-solid fa-chevron-down"></i>
-            </NavbarLinks>
-            <MenuDesplegableUl>
-              <MenuDesplegableLi>
-                <NavbarLinkInside>Tortas</NavbarLinkInside>
-              </MenuDesplegableLi>
-              <MenuDesplegableLi>
-                <NavbarLinkInside>Mini cakes</NavbarLinkInside>
-              </MenuDesplegableLi>
-              <MenuDesplegableLi>
-                <NavbarLinkInside>Macarones</NavbarLinkInside>
-              </MenuDesplegableLi>
-              <MenuDesplegableLi>
-                <NavbarLinkInside>Petit food</NavbarLinkInside>
-              </MenuDesplegableLi>
-              <MenuDesplegableLi>
-                <NavbarLinkInside>Boxs</NavbarLinkInside>
-              </MenuDesplegableLi>
-              <MenuDesplegableLi>
-                <NavbarLinkInside>Tortas a medida</NavbarLinkInside>
-              </MenuDesplegableLi>
-            </MenuDesplegableUl>
-          </Li>
+      <ContainerNavbar>
+        <ContainerNavbarLeft>
+          <Logo src={logo} />
+        </ContainerNavbarLeft>
+        <ContainerNavbarCenter isOpen={isOpen}>
+          <Ul>
+            <Li>
+              <NavbarLinks>Home</NavbarLinks>
+            </Li>
+            <Li>
+              <NavbarLinks className="Producto">
+                Productos <i className="fa-solid fa-chevron-down"></i>
+              </NavbarLinks>
+              <MenuDesplegableUl>
+                <MenuDesplegableLi>
+                  <NavbarLinkInside>Tortas</NavbarLinkInside>
+                </MenuDesplegableLi>
+                <MenuDesplegableLi>
+                  <NavbarLinkInside>Mini cakes</NavbarLinkInside>
+                </MenuDesplegableLi>
+                <MenuDesplegableLi>
+                  <NavbarLinkInside>Macarones</NavbarLinkInside>
+                </MenuDesplegableLi>
+                <MenuDesplegableLi>
+                  <NavbarLinkInside>Petit food</NavbarLinkInside>
+                </MenuDesplegableLi>
+                <MenuDesplegableLi>
+                  <NavbarLinkInside>Boxs</NavbarLinkInside>
+                </MenuDesplegableLi>
+                <MenuDesplegableLi>
+                  <NavbarLinkInside>Tortas a medida</NavbarLinkInside>
+                </MenuDesplegableLi>
+              </MenuDesplegableUl>
+            </Li>
 
-          <Li>
-            <NavbarLinks>About</NavbarLinks>
-          </Li>
-          <Li>
-            <NavbarLinks>Contacto</NavbarLinks>
-          </Li>
-          <Li>
-            <NavbarLinks>Work shop</NavbarLinks>
-          </Li>
-        </Ul>
-      </ContainerNavbarCenter>
-      <ContainerButton>
-        <Label className="hamburger">
-          <input type="checkbox" checked={isOpen} onClick={handleClick} />
-          <svg viewBox="0 0 32 32">
-            <path
-              className="line line-top-bottom"
-              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-            ></path>
-            <path className="line" d="M7 16 27 16"></path>
-          </svg>
-        </Label>
-      </ContainerButton>
-    </ContainerNavbar>
+            <Li>
+              <NavbarLinks>About</NavbarLinks>
+            </Li>
+            <Li>
+              <NavbarLinks>Contacto</NavbarLinks>
+            </Li>
+            <Li>
+              <NavbarLinks>Work shop</NavbarLinks>
+            </Li>
+          </Ul>
+        </ContainerNavbarCenter>
+        <ContainerButton>
+          <Label className="hamburger">
+            <input type="checkbox" checked={isOpen} onClick={handleClick} />
+            <svg viewBox="0 0 32 32">
+              <path
+                className="line line-top-bottom"
+                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+              ></path>
+              <path className="line" d="M7 16 27 16"></path>
+            </svg>
+          </Label>
+        </ContainerButton>
+      </ContainerNavbar>
     </>
-    
   );
 };
 
@@ -84,11 +81,11 @@ const ContainerNavbar = styled.div`
   height: 110px;
   width: 100%;
   flex-direction: row;
-  font-family: "Shantell Sans", cursive;
-  position: absolute;
+  font-family: "Jost", sans-serif;
+  position: fixed;
   z-index: 999;
   top: 40px;
-  @media(max-width:1000px){
+  @media (max-width: 1000px) {
     top: 0;
   }
 `;

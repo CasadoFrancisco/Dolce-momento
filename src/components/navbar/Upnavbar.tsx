@@ -37,8 +37,8 @@ const Container = styled.nav`
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  position: absolute;
-  z-index: 80;
+  position: fixed;
+  z-index: 99;
 `;
 
 const Message = styled.div`
