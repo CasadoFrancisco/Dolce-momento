@@ -90,6 +90,10 @@ const Container = styled.div`
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 30px;
+  @media(max-width:400px){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `;
 const ContainerOne = styled.div`
   display: flex;
@@ -133,6 +137,8 @@ const ContainerText = styled.div`
   }
   @media (max-width: 375px) {
     height: 70%;
+   padding-left: 5px;
+   padding-right: 5px;
   }
 `;
 const Title = styled.h1`
