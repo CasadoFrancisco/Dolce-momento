@@ -90,7 +90,7 @@ const Container = styled.div`
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 30px;
-  @media(max-width:400px){
+  @media(max-width:500px){
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -109,7 +109,7 @@ const ContainerOne = styled.div`
     align-items: center;
     justify-content: center;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 500px) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -135,7 +135,7 @@ const ContainerText = styled.div`
     align-items: center;
     justify-content: center;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 500px) {
     height: 70%;
    padding-left: 5px;
    padding-right: 5px;
