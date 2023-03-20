@@ -260,6 +260,15 @@ const ContainerTwo = styled.div`
   padding: 50px;
   flex-direction: row;
   width: 100%;
+  @media(max-width:900px){
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+  }
+  @media(max-width:500px){
+padding: 0;
+}
+
 `;
 const CardType = styled.div`
   display: flex;
@@ -269,6 +278,11 @@ const CardType = styled.div`
   height: 500px;
   flex-direction: column;
   position: relative;
+  @media(max-width:900px){
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;
+  }
 `;
 const CardImg = styled.img`
   height: 100%;
@@ -289,8 +303,8 @@ const CardButton = styled.button`
   border-style: none;
   padding: 8px;
   background-color: #ffc2d1;
-  transition: color 0.5s ease-in, background-color 1s ease-in,
-    box-shadow 0.1s ease-in;
+  transition: color 0.6s ease-in, background-color 1s ease-in,
+    box-shadow 0.2s ease-in;
 
   &:active {
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -299,6 +313,9 @@ const CardButton = styled.button`
     background-color: rgba(255, 194, 209, 0.8);
     color: white;
   }
+  @media(max-width:900px){
+    font-size: 13px;
+  }
 `;
 const Containerthree = styled.div`
   display: flex;
@@ -306,6 +323,7 @@ const Containerthree = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  
 `;
 const PresupuestoImg = styled.img`
   width: 93%;
@@ -326,6 +344,13 @@ const PresupuestoInfo = styled.div`
   padding-right: 20px;
   border-radius: 20px;
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+  @media(max-width:850px){
+    width: 50%;
+  }
+  @media(max-width:420px){
+    height: 250px;
+  }
+  
 `;
 const PresupuestoContainerIcons = styled.div`
   display: flex;
@@ -335,9 +360,21 @@ const PresupuestoContainerIcons = styled.div`
   position: absolute;
   top: 170px;
   width: 100%;
+  @media(max-width:850px){
+    top: 180px;
+  }
+  @media(max-width:420px){
+    top: 210px;
+  }
 `;
 const PresupuestoIcons = styled(motion.img)`
   cursor: pointer;
+  @media(max-width:900px){
+   height: 80px;
+}
+@media(max-width:500px){
+    height: 70px;
+  }
 `;
 const PresupuestoTitle = styled.h4`
   padding-top: 20px;
