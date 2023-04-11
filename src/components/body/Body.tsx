@@ -323,7 +323,7 @@ const Containerthree = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  
+  padding-bottom: 20px;
 `;
 const PresupuestoImg = styled.img`
   width: 93%;
